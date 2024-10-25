@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arc-en-ciel animé</title>
+    <title>Texte Arc-en-Ciel Responsive</title>
     <style>
         /* Style de base pour centrer le contenu */
         body, html {
@@ -27,6 +27,8 @@
             -webkit-background-clip: text;
             color: transparent; /* Rendre le texte transparent pour voir l'animation */
             animation: rainbow 5s linear infinite;
+            text-align: center;
+            padding: 0 10px; /* Padding pour éviter que le texte touche les bords sur les petits écrans */
         }
 
         /* Animation du dégradé pour le déplacement */
@@ -38,9 +40,23 @@
                 background-position: 100%;
             }
         }
+
+        /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .rainbow-text {
+                font-size: 2em; /* Réduire la taille de la police sur les écrans plus petits */
+            }
+        }
+
+        /* Media query pour les très petits écrans (par exemple les smartphones) */
+        @media (max-width: 480px) {
+            .rainbow-text {
+                font-size: 1.5em; /* Encore plus petit pour les écrans de smartphone */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="rainbow-text">Here you are Clau ^^</div>
+    <div class="rainbow-text">Texte Arc-en-Ciel</div>
 </body>
 </html>
