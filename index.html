@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MonProjet</title>
+    <title>Arc-en-ciel animé</title>
     <style>
-        body {
+        /* Style de base pour centrer le contenu */
+        body, html {
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif; /* Change la police ici */
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
         }
-        .content {
-            text-align: center;
+
+        /* Style du texte avec effet arc-en-ciel */
+        .rainbow-text {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400%; /* Taille du fond plus grande pour l'animation */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent; /* Rendre le texte transparent pour voir l'animation */
+            animation: rainbow 5s linear infinite;
+        }
+
+        /* Animation du dégradé pour le déplacement */
+        @keyframes rainbow {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>MonProjet</h1>
-        <p>Une courte description de MonProjet.</p>
-    </div>
+    <div class="rainbow-text">Texte Arc-en-Ciel</div>
 </body>
 </html>
